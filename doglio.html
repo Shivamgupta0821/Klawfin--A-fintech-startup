@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investing in DOGLIO FOODTRUCK</title>
+  <link rel="icon" href="klawfinn.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('startup5.jpg'); /* Add your background image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* Black transparent overlay on background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+
+    header .logo img {
+      height: 80px;
+    }
+
+    header h1 {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .nav-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: linear-gradient(to right, #ff6f00, #ff8f00);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background: linear-gradient(to right, #d35400, #e67e22);
+      box-shadow: 0 0 10px orange;
+      transform: scale(1.05);
+    }
+
+    .main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .main img {
+      width: 550px;
+      height: auto;
+      transition: 0.4s ease;
+      border-radius: 15px;
+    }
+
+    .main img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px orange;
+    }
+
+    .essay-box {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid orange;
+      font-size: 18px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .calculator-box {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid orange;
+    }
+
+    .calculator-box input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .calculator-box button {
+      padding: 12px 30px;
+      background-color: #ff6f00;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .calculator-box button:hover {
+      background-color: #d35400;
+      box-shadow: 0 0 10px orange;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-buttons {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="klawfinn.png" alt="Logo">
+    </div>
+    <h1>Investing in Doglio Food Truck</h1>
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='startups.html'">Startups</button>
+      <button onclick="location.href='login.html'">Login</button>
+    </div>
+  </header>
+
+  <div class="main">
+    <img src="startup5.jpg" alt="Doglio Foodtruck">
+
+    <div class="essay-box">
+        Doglio is not just a food truck — it's a rolling revolution in the world of street food. Built with the vision to serve gourmet hot dogs, burgers, and global fusion snacks, Doglio brings premium taste to the streets at affordable prices. Our recipes are curated by top chefs, and our ingredients are locally sourced, ensuring both freshness and flavor in every bite.
+Positioned in high-footfall urban zones, events, college fests, and IT parks, Doglio is built for volume and visibility. We’ve crafted a brand that's vibrant, youthful, and built for viral growth through smart marketing and a strong social media presence.
+From an investor's standpoint, Doglio offers high profit margins with minimal overheads — no rents, lean staff, and flexible mobility. Our scalable model allows easy replication in multiple cities, making expansion quick and cost-effective.
+Your capital is safe with us, and returns are projected to grow significantly within the first year. Invest in Doglio today and be a part of a tasty, trendsetting journey that promises both passion and profit on wheels.
+    </div>
+    <div class="calculator-box">
+      <h2>Investment Calculator</h2>
+      <input type="text" id="amount" placeholder="Enter investment amount (₹)">
+      <input type="text" id="rate" placeholder="Expected return percentage (%)">
+      <button onclick="calculateReturn()">Calculate</button>
+      <button onclick="location.href='payment.html'">Proceed to Pay</button>
+      <button onclick="location.href='index.html'">Explore More Startups</button>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    function calculateReturn() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+
+      if (isNaN(amount) || isNaN(rate) || amount <= 0 || rate <= 0) {
+        document.getElementById('result').innerHTML = "Please enter valid numbers.";
+        return;
+      }
+
+      const profit = (amount * rate) / 100;
+      const total = amount + profit;
+
+      document.getElementById('result').innerHTML = `
+        Profit after 1 year: ₹${profit.toFixed(2)}<br>
+        Total amount after 1 year: ₹${total.toFixed(2)}
+      `;
+    }
+  </script>
+
+</body>
+</html>

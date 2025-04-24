@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --orange: #d97706;
+  --brown: #8b5e3c;
+  --light-bg: #fdf6f0;
+  --white: #fff;
+  --dark: #1f1f1f;
+  --radius: 12px;
+  --gradient: linear-gradient(135deg, #d97706, #8b5e3c);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light-bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+nav .btn {
+  background: var(--brown);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  margin-left: 1rem;
+  transition: 0.3s;
+}
+
+nav .btn:hover {
+  background: var(--orange);
+}
+
+/* HERO */
+
+.hero {
+  background: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 1rem 0 2rem;
+}
+
+.cta-buttons .btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--orange);
+  color: white;
+}
+
+.btn.secondary {
+  background: var(--brown);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* HOW IT WORKS */
+
+.how-it-works {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.step {
+  background: white;
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(218, 90, 4, 0.05);
+  width: 350px; /* Previously 250px */
+  min-height: 380px; /* Optional: to ensure space for image + text */
+  transition: transform 0.3s;
+}
+
+
+.step:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgb(248, 149, 1);
+}
+
+.step img {
+  width: 280px;
+  height: 180px; /* Set a specific height */
+  object-fit: cover; /* Or use 'cover' if you want to crop instead */
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #d26120, #a15007, #f39c12) 1;
+  border-radius: 18px;
+  object-fit: cover;  /* or 'contain' */
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* STARTUPS */
+
+.startups {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.startups h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--brown);
+}
+
+.startup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.startup-card {
+  width: 270px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.startup-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* .startup-card img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+} */
+.startup-card img {
+  width: 230px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #000000; /* This adds the black border */
+  border-radius: 10px; /* Optional: rounded edges */
+  padding: 4px; /* Optional: space between image and border */
+  background-color: #ffffff; /* Optional: ensures background behind transparent images */
+  display: block;                 /* Makes margin auto work */
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto; /* Center the image */
+}
+
+
+
+.startup-card h3 {
+  font-size: 1.2rem;
+  color: var(--orange);
+}
+
+.startup-card p {
+  margin: 0.3rem 0;
+}
+
+.startup-card .btn.glow {
+  margin-top: 0.5rem;
+  background: var(--brown);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+.startup-card .btn.glow:hover {
+  background: var(--orange);
+  box-shadow: 0 0 15px #ffa500;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  background: var(--light-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--brown);
+}
+
+.testimonial-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.testimonial-box p {
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-box span {
+  display: block;
+  margin-top: 1rem;
+  color: var(--orange);
+  font-weight: bold;
+}
+
+/* SUCCESS STORIES */
+
+.success-stories {
+  background: #fff8f2;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.success-stories h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--brown);
+}
+
+footer {
+  background: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}

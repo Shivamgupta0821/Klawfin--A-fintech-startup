@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Klawfin</title>
+  <link rel="icon" href="klawfinn.png" type="image/png"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('signup.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .header-title {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      flex-grow: 1;
+      color: #fff;
+    }
+
+    .nav-buttons button {
+      margin-left: 15px;
+      padding: 10px 18px;
+      background: linear-gradient(145deg, #ff8c00, #a0522d);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+    }
+
+    .signup-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+    }
+
+    .signup-container h2 {
+      margin-bottom: 25px;
+      color: #ffa500;
+    }
+
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .signup-container input[type="submit"] {
+      background: linear-gradient(145deg, #ff8c00, #a0522d);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .signup-container input[type="submit"]:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .header-title {
+        font-size: 20px;
+      }
+
+      .nav-buttons button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .signup-container {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="klawfinn.png" alt="Klawfin Logo" />
+    </div>
+    <div class="header-title">Sign Up to Klawfin</div>
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='startups.html'">Startups</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+    </div>
+  </header>
+
+  <div class="signup-container">
+    <h2>Sign Up to Klawfin</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <input type="submit" value="Sign Up" />
+    </form>
+  </div>
+</body>
+</html>
